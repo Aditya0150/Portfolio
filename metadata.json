@@ -1,0 +1,7 @@
+{
+  "name": "Aditya Negi - AI Portfolio",
+  "description": "Interactive portfolio website for Aditya Pratap Singh Negi featuring an AI persona chatbot powered by Gemini.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
