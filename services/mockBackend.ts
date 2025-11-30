@@ -1,7 +1,7 @@
 import { RESUME_DATA } from '../constants';
 import { Project, Experience, SkillCategory } from '../types';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 // Keys for LocalStorage Persistence (Fallback Mode)
 const STORAGE_KEYS = {
@@ -85,7 +85,7 @@ export const fetchVisitorCount = async (): Promise<number> => {
     const timeoutId = setTimeout(() => controller.abort(), 500); // Fast timeout for polling
     const response = await fetch(`${API_BASE_URL}/visitors`, { signal: controller.signal });
     clearTimeout(timeoutId);
-    
+
     if (!response.ok) throw new Error('API Error');
     const data = await response.json();
     return data.count;
@@ -119,7 +119,7 @@ export const submitContactForm = async (data: { name: string; email: string; mes
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
-    
+
     if (!response.ok) throw new Error('Failed to send message');
     return await response.json();
   } catch (error) {
@@ -183,7 +183,7 @@ export const updateProject = async (id: string, updates: Partial<Project>): Prom
     const projects = getFromStorage(STORAGE_KEYS.PROJECTS, RESUME_DATA.projects) as Project[];
     const index = projects.findIndex(p => p.id === id);
     if (index === -1) throw new Error("Project not found");
-    
+
     const updatedProject = { ...projects[index], ...updates };
     projects[index] = updatedProject;
     saveToStorage(STORAGE_KEYS.PROJECTS, projects);

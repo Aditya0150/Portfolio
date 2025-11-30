@@ -1,7 +1,7 @@
 import { AIMode } from '../types';
 
-// Use the backend URL
-const API_URL = 'http://localhost:5000/api';
+// Use the backend URL from environment variables or default to localhost
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 export interface FileInput {
   mimeType: string;
