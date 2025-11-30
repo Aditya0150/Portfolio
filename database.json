@@ -1,0 +1,40 @@
+{
+  "visitorCount": 1033,
+  "projects": [
+    {
+      "id": "1",
+      "title": "Off Beat Himalaya",
+      "description": "A user-friendly trekking website to simplify the process of exploring and booking trek plans.",
+      "tags": [
+        "React.js",
+        "JavaScript",
+        "HTML/CSS"
+      ],
+      "date": "Apr 2025 - Jun 2025"
+    },
+    {
+      "id": "2",
+      "title": "Galaxy",
+      "description": "Full Stack Social Media Application with Google auth, CRUD operations, and real-time features.",
+      "tags": [
+        "React.js",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "date": "Nov 2022 - Jan 2023"
+    },
+    {
+      "id": "3",
+      "title": "Evento",
+      "description": "Event Management Website with invite creation, dashboard, and guest list management.",
+      "tags": [
+        "PHP",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "date": "Jan 2022 - Mar 2022"
+    }
+  ]
+}
