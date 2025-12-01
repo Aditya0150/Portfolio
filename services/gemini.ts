@@ -2,6 +2,7 @@ import { AIMode } from '../types';
 
 // Use the backend URL from environment variables or default to localhost
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+console.log('Gemini Service using API_URL:', API_URL);
 
 export interface FileInput {
   mimeType: string;

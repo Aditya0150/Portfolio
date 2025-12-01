@@ -2,6 +2,7 @@ import { RESUME_DATA } from '../constants';
 import { Project, Experience, SkillCategory } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+console.log('MockBackend Service using API_BASE_URL:', API_BASE_URL);
 
 // Keys for LocalStorage Persistence (Fallback Mode)
 const STORAGE_KEYS = {
